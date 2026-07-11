@@ -5,11 +5,16 @@ import Footer from '../components/Footer.astro';
 import PipelineBar from '../components/PipelineBar.astro';
 import CtaBand from '../components/CtaBand.astro';
 ---
-<Layout title="AI Driven Academy — la méthode, du Discovery à la Delivery">
+<Layout
+  title="Formation Spec-Driven Development & IA | AI Driven Academy"
+  description="Formations en développement assisté par IA pour équipes product & tech, méthode Spec-Driven Development conçue par un CPO et un CTO. Financement OPCO possible."
+  path="/"
+>
   <div style="background: rgb(255, 255, 255); color: var(--plum-900); min-width: 1240px;">
 
     <Header active="accueil" />
 
+    <main>
     <div class="bg-dots" style="color: rgb(255, 255, 255);">
       <div style="display: grid; grid-template-columns: 1fr 440px; gap: 72px; align-items: center; padding: 96px 64px 76px;">
         <div>
@@ -189,7 +194,7 @@ import CtaBand from '../components/CtaBand.astro';
       <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 44px; text-wrap: balance;">Qui forme vos équipes</h2>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
         <div style="display: grid; grid-template-columns: 200px 1fr; border: 1px solid var(--plum-200); border-radius: 14px; overflow: hidden; background: rgb(255, 255, 255); box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
-          <img src="/assets/photo-aurelien.jpg" alt="Aurélien Binder-Meunier" style="width: 100%; height: 100%; min-height: 220px; object-fit: cover; display: block;" />
+          <img src="/assets/photo-aurelien.jpg" alt="Aurélien Binder-Meunier, fondateur CTO d'AI Driven Academy" loading="lazy" decoding="async" width="200" height="220" style="width: 100%; height: 100%; min-height: 220px; object-fit: cover; display: block;" />
           <div style="padding: 30px 32px;">
             <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 25px; margin: 0px 0px 6px; letter-spacing: -0.01em;">Aurélien Binder-Meunier</h3>
             <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--orange-700); margin-bottom: 16px;">FONDATEUR — CTO · ENGINEERING</div>
@@ -197,7 +202,7 @@ import CtaBand from '../components/CtaBand.astro';
           </div>
         </div>
         <div style="display: grid; grid-template-columns: 200px 1fr; border: 1px solid var(--plum-200); border-radius: 14px; overflow: hidden; background: rgb(255, 255, 255); box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
-          <img src="/assets/photo-nicolas.jpg" alt="Nicolas Drouet" style="width: 100%; height: 100%; min-height: 220px; object-fit: cover; display: block;" />
+          <img src="/assets/photo-nicolas.jpg" alt="Nicolas Drouet, fondateur CPO d'AI Driven Academy" loading="lazy" decoding="async" width="200" height="220" style="width: 100%; height: 100%; min-height: 220px; object-fit: cover; display: block;" />
           <div style="padding: 30px 32px;">
             <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 25px; margin: 0px 0px 6px; letter-spacing: -0.01em;">Nicolas Drouet</h3>
             <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--orange-700); margin-bottom: 16px;">FONDATEUR — CPO · STRATÉGIE PRODUIT</div>
@@ -214,6 +219,7 @@ import CtaBand from '../components/CtaBand.astro';
       ctaHref="/contact"
       note="Financement OPCO possible."
     />
+    </main>
 
     <Footer variant="full" />
   </div>

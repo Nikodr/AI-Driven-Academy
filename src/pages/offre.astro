@@ -4,11 +4,80 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PipelineBar from '../components/PipelineBar.astro';
 import CtaBand from '../components/CtaBand.astro';
+
+const SITE_URL = 'https://aidriven.academy';
+
+const courseSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      item: {
+        '@type': 'Course',
+        name: 'Formations initiales',
+        description:
+          "Deux parcours distincts (développement et produit) sur la méthode Spec-Driven Development, disponibles en modules unitaires, modules regroupés ou cohorte distancielle.",
+        provider: { '@id': `${SITE_URL}/#organization` },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      item: {
+        '@type': 'Course',
+        name: 'Kickstart Spec Driven',
+        description:
+          "Trois jours d'accompagnement embarqué auprès d'une équipe pour lancer une démarche Spec-Driven Development sur un projet réel.",
+        provider: { '@id': `${SITE_URL}/#organization` },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 3,
+      item: {
+        '@type': 'Course',
+        name: 'Atelier Transfo IA',
+        description:
+          "Journée d'atelier collectif réunissant les équipes produit et développement autour d'une pratique commune de développement assisté par IA.",
+        provider: { '@id': `${SITE_URL}/#organization` },
+      },
+    },
+    {
+      '@type': 'ListItem',
+      position: 4,
+      item: {
+        '@type': 'Course',
+        name: 'BBL récurrent',
+        description:
+          "Sessions courtes et récurrentes pour entretenir la dynamique des équipes après le parcours de formation.",
+        provider: { '@id': `${SITE_URL}/#organization` },
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Nos formations', item: `${SITE_URL}/offre` },
+  ],
+};
 ---
-<Layout title="Nos formations — AI Driven Academy">
+<Layout
+  title="Formations IA : Kickstart, Ateliers, BBL | AI Driven Academy"
+  description="Quatre formats de formation en IA pour équipes tech & produit : formations initiales, Kickstart Spec Driven, ateliers collectifs, BBL récurrent."
+  path="/offre"
+  structuredData={[courseSchema, breadcrumbSchema]}
+>
   <div style="background: rgb(255, 255, 255); color: var(--plum-900); min-width: 1240px;">
 
     <Header active="formations" />
+
+    <main>
 
     <div class="bg-dots" style="color: rgb(255, 255, 255);">
       <div style="padding: 88px 64px 72px;">
@@ -185,6 +254,7 @@ import CtaBand from '../components/CtaBand.astro';
       ctaHref="/contact"
       note="Financement OPCO possible."
     />
+    </main>
 
     <Footer variant="full" />
   </div>

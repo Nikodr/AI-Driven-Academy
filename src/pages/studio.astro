@@ -6,10 +6,17 @@ import CtaBand from '../components/CtaBand.astro';
 
 const MAILTO = "mailto:contact@aidrivenacademy.com?subject=Partenariat%20AI%20Academy%20Studio";
 ---
-<Layout title="AI Academy Studio — Partenaires | AI Driven Academy" noindex={true}>
+<Layout
+  title="AI Academy Studio — marque blanche | AI Driven Academy"
+  description="Vendez une offre de formation IA sous votre marque : conception, delivery et mise à jour par AI Driven Academy. Partenariat ESN et cabinets de conseil."
+  path="/studio"
+  noindex={true}
+>
   <div style="background: rgb(255, 255, 255); color: var(--plum-900); min-width: 1240px;">
 
     <Header active="studio" />
+
+    <main>
 
     <div class="bg-dots" style="color: rgb(255, 255, 255);">
       <div style="display: grid; grid-template-columns: 1fr 440px; gap: 72px; align-items: center; padding: 96px 64px;">
@@ -187,6 +194,7 @@ const MAILTO = "mailto:contact@aidrivenacademy.com?subject=Partenariat%20AI%20Ac
       ctaLabel="Échanger sur un partenariat"
       ctaHref={MAILTO}
     />
+    </main>
 
     <Footer variant="minimal" />
   </div>
