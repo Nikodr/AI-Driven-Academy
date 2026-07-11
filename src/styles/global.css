@@ -1,0 +1,148 @@
+/* ============================================================
+   AI Driven Academy — Global styles
+   Design tokens sourced from website/tokens/colors.css (source of truth)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Primaires */
+  --plum: #3F0434;
+  --orange: #F16B52;
+
+  /* Palette Plum */
+  --plum-900: #1A0116;
+  --plum-800: #3F0434;
+  --plum-700: #5C1A52;
+  --plum-600: #7A4A72;
+  --plum-500: #B08AAA;
+  --plum-200: #E8D5E4;
+  --plum-100: #F5EFF4;
+  --plum-50:  #FAF5F9;
+
+  /* Palette Orange */
+  --orange-700: #C9502F;
+  --orange-500: #F16B52;
+  --orange-300: #F7A08E;
+  --orange-100: #FBDDD6;
+  --orange-50:  #FEF3F0;
+
+  /* Sémantique */
+  --bg-dark: var(--plum-800);
+  --bg-darker: var(--plum-900);
+
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Figtree', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  min-width: 1240px;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: var(--font-body);
+  color: var(--plum-900);
+}
+
+a {
+  color: var(--plum-800);
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); }
+
+button { font-family: inherit; }
+
+/* ── Animations ─────────────────────────────────────────── */
+@keyframes ada-blink {
+  0%, 55% { opacity: 1; }
+  56%, 100% { opacity: 0; }
+}
+
+@keyframes ada-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26, 1, 22, 0.55); }
+  70% { box-shadow: 0 0 0 10px rgba(26, 1, 22, 0); }
+}
+
+/* ── Dotted dark background pattern ─────────────────────── */
+.bg-dots {
+  background-color: var(--plum-900);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn-orange {
+  transition: background 0.15s ease;
+}
+.btn-orange:hover {
+  background: var(--orange-700) !important;
+}
+
+.btn-plum {
+  transition: background 0.15s ease;
+}
+.btn-plum:hover {
+  background: var(--plum-700) !important;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(241, 107, 82, 0.55);
+  outline-offset: 3px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--orange-500) !important;
+  box-shadow: 0 0 0 4px rgba(241, 107, 82, 0.25);
+}
+
+/* ── Card interactions ──────────────────────────────────── */
+.card-lift {
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(63, 4, 52, 0.16);
+  border-color: var(--orange-500) !important;
+}
+.card-lift--tint:hover {
+  background: var(--orange-50) !important;
+}
+
+.card-slide {
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+.card-slide:hover {
+  transform: translateX(6px);
+  border-color: var(--orange-500) !important;
+}
+
+.table-row-light {
+  transition: background 0.15s ease;
+}
+.table-row-light:hover {
+  background: var(--plum-50);
+}
+
+.table-row-dark {
+  transition: background 0.15s ease;
+}
+.table-row-dark:hover {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* ── Nav underline helper ───────────────────────────────── */
+.nav-active {
+  color: #fff;
+  border-bottom: 2px solid var(--orange-500);
+  padding-bottom: 2px;
+}
