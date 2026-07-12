@@ -4,7 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CtaBand from '../components/CtaBand.astro';
 
-const MAILTO = "mailto:nicolas@thegreencompagnon.com?subject=Partenariat%20AI%20Academy%20Studio";
+const MAILTO = "mailto:nicolas@thegreencompagnon.com?subject=AI%20Academy%20Studio%20-%20Demande%20d'informations";
+const CALENDAR = "https://app.lemcal.com/@nicolasdrouet/nicolas-drouet";
 ---
 <Layout
   title="AI Academy Studio — marque blanche | AI Driven Academy"
@@ -25,7 +26,8 @@ const MAILTO = "mailto:nicolas@thegreencompagnon.com?subject=Partenariat%20AI%20
           <h1 style="font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1.08; letter-spacing: -0.025em; margin: 0px; color: rgb(255, 255, 255); text-wrap: balance;">Vendez une offre de formation IA <span style="color: var(--orange-500);">sous votre marque</span>, propulsée par notre méthode.</h1>
           <p style="margin: 24px 0px 0px; font-size: 19px; line-height: 1.55; color: rgba(255, 255, 255, 0.85); max-width: 700px;">Nous la concevons, la délivrons et la maintenons à jour.</p>
           <p style="margin: 18px 0px 0px; font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.72); max-width: 700px; text-wrap: pretty;">Vous n'avez ni le temps de construire un curriculum qui se périme en trois mois, ni l'envie de le maintenir. C'est notre métier.</p>
-          <a href={MAILTO} class="btn-orange" style="display: inline-block; margin-top: 38px; background: var(--orange-500); color: rgb(255, 255, 255); font-weight: 700; font-size: 17px; padding: 18px 34px; border-radius: 12px;">Échanger sur un partenariat</a>
+          <a href={CALENDAR} class="btn-orange" style="display: inline-block; margin-top: 38px; background: var(--orange-500); color: rgb(255, 255, 255); font-weight: 700; font-size: 17px; padding: 18px 34px; border-radius: 12px;">Réserver un créneau de 30 min</a>
+          <div style="margin-top: 16px; font-size: 14.5px;"><a href={MAILTO} style="color: rgba(255, 255, 255, 0.72); border-bottom: 1px solid rgba(255, 255, 255, 0.4); padding-bottom: 1px;">ou envoyer nous un email pour en discuter</a></div>
         </div>
 
         <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 14px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.45) 0px 24px 60px;">
@@ -191,8 +193,10 @@ const MAILTO = "mailto:nicolas@thegreencompagnon.com?subject=Partenariat%20AI%20
     <CtaBand
       heading="Parlons-en directement"
       body="Pas de formulaire. Écrivez-nous ou réservez un créneau : nous validons ensemble en trente minutes si le modèle correspond à votre contexte."
-      ctaLabel="Échanger sur un partenariat"
-      ctaHref={MAILTO}
+      ctaLabel="Réserver un créneau de 30 min"
+      ctaHref={CALENDAR}
+      note="ou envoyer nous un email pour en discuter"
+      noteHref={MAILTO}
     />
     </main>
 
