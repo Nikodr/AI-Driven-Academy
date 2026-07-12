@@ -4,8 +4,6 @@ interface Props {
 }
 
 const { active } = Astro.props;
-const casHref = active === 'accueil' ? '#cas' : '/#cas';
-const equipeHref = active === 'accueil' ? '#equipe' : '/#equipe';
 ---
 <header style="display: flex; align-items: center; gap: 32px; padding: 22px 64px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); position: sticky; top: 0px; background: rgba(26, 1, 22, 0.92); backdrop-filter: blur(8px); z-index: 50; color: rgb(255, 255, 255);">
   <a href="/" style="display: flex; align-items: center; gap: 12px; color: rgb(255, 255, 255);">
@@ -41,11 +39,9 @@ const equipeHref = active === 'accueil' ? '#equipe' : '/#equipe';
   <nav>
     <a href="/" class:list={{ 'is-active': active === 'accueil' }}>Accueil{active === 'accueil' && <span style="color: var(--orange-500);"> ·</span>}</a>
     <a href="/offre" class:list={{ 'is-active': active === 'formations' }}>Nos formations{active === 'formations' && <span style="color: var(--orange-500);"> ·</span>}</a>
-    <a href={casHref}>Études de cas</a>
-    <a href={equipeHref}>À propos</a>
+    <a href="/studio" class:list={{ 'is-active': active === 'studio' }}>AI Academy Studio{active === 'studio' && <span style="color: var(--orange-500);"> ·</span>}</a>
   </nav>
   <a href="/contact" class="menu-cta">Cadrer votre besoin</a>
-  <a href="/studio" class:list={['menu-studio', { 'is-active': active === 'studio' }]}>AI Academy Studio - Partners</a>
 </div>
 
 <script>
