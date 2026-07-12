@@ -99,6 +99,7 @@ const contactPageSchema = {
   <script>
     const form = document.getElementById('contact-form') as HTMLFormElement;
     const emailInput = document.getElementById('f-email') as HTMLInputElement;
+    const telInput = document.getElementById('f-tel') as HTMLInputElement;
     const contexteInput = document.getElementById('f-contexte') as HTMLTextAreaElement;
     const emailError = document.querySelector('[data-error-for="f-email"]') as HTMLElement;
     const contexteError = document.querySelector('[data-error-for="f-contexte"]') as HTMLElement;
@@ -150,10 +151,30 @@ const contactPageSchema = {
       submitBtn.textContent = 'Envoi...';
 
       try {
-        // Aucun backend n'est branché pour le moment : à connecter à un endpoint réel.
-        await new Promise((resolve) => setTimeout(resolve, 600));
-        form.reset();
-        successMsg.style.display = 'block';
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            access_key: '1476d813-26e1-41bd-9633-327c6b703cae',
+            subject: 'Nouveau message — formulaire de contact AI Driven Academy',
+            from_name: 'AI Driven Academy — Formulaire de contact',
+            email: emailInput.value.trim(),
+            tel: telInput.value.trim(),
+            contexte: contexteInput.value.trim(),
+          }),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          form.reset();
+          successMsg.style.display = 'block';
+        } else {
+          failureMsg.style.display = 'block';
+        }
       } catch {
         failureMsg.style.display = 'block';
       } finally {
