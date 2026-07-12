@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PipelineBar from '../components/PipelineBar.astro';
 import CtaBand from '../components/CtaBand.astro';
+import MobileStickyCta from '../components/MobileStickyCta.astro';
 
 const SITE_URL = 'https://aidriven.academy';
 
@@ -73,18 +74,18 @@ const breadcrumbSchema = {
   path="/offre"
   structuredData={[courseSchema, breadcrumbSchema]}
 >
-  <div style="background: rgb(255, 255, 255); color: var(--plum-900); min-width: 1240px;">
+  <div class="page-shell" style="background: rgb(255, 255, 255); color: var(--plum-900); min-width: 1240px;">
 
     <Header active="formations" />
 
     <main>
 
     <div class="bg-dots" style="color: rgb(255, 255, 255);">
-      <div style="padding: 88px 64px 72px;">
-        <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-500); margin-bottom: 18px;">NOS FORMATIONS</div>
-        <h1 style="font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1.06; letter-spacing: -0.025em; margin: 0px; color: rgb(255, 255, 255); max-width: 900px; text-wrap: balance;">Quatre formats qui s'enchaînent. <span style="color: var(--orange-500);">Ou pas.</span></h1>
-        <p style="margin: 26px 0px 0px; font-size: 17px; line-height: 1.65; color: rgba(255, 255, 255, 0.72); max-width: 820px; text-wrap: pretty;">Chaque format répond seul à un besoin précis. Enchaînés dans l'ordre, ils forment un parcours pensé pour transformer les pratiques en profondeur. Peu d'organismes combinent formation, atelier collectif, accompagnement terrain et suivi dans la durée sous un même acteur.</p>
-        <p style="margin: 18px 0px 0px; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.55); max-width: 820px;">Vous pouvez suivre le parcours complet, choisir un seul format, ou entrer directement à l'étape qui correspond à votre situation. Chaque format précise ci-dessous à qui il s'adresse, sa durée et sa modalité.</p>
+      <div class="m-section-tight" style="padding: 88px 64px 72px;">
+        <div class="m-kicker" style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-500); margin-bottom: 18px;">NOS FORMATIONS</div>
+        <h1 class="m-h1" style="font-family: var(--font-display); font-weight: 800; font-size: 56px; line-height: 1.06; letter-spacing: -0.025em; margin: 0px; color: rgb(255, 255, 255); max-width: 900px; text-wrap: balance;">Quatre formats qui s'enchaînent. <span style="color: var(--orange-500);">Ou pas.</span></h1>
+        <p class="m-body-lg" style="margin: 26px 0px 0px; font-size: 17px; line-height: 1.65; color: rgba(255, 255, 255, 0.72); max-width: 820px; text-wrap: pretty;">Chaque format répond seul à un besoin précis. Enchaînés dans l'ordre, ils forment un parcours pensé pour transformer les pratiques en profondeur. Peu d'organismes combinent formation, atelier collectif, accompagnement terrain et suivi dans la durée sous un même acteur.</p>
+        <p class="m-body" style="margin: 18px 0px 0px; font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.55); max-width: 820px;">Vous pouvez suivre le parcours complet, choisir un seul format, ou entrer directement à l'étape qui correspond à votre situation. Chaque format précise ci-dessous à qui il s'adresse, sa durée et sa modalité.</p>
       </div>
 
       <PipelineBar items={[
@@ -97,59 +98,59 @@ const breadcrumbSchema = {
     </div>
 
     <!-- Format 01 -->
-    <div id="formations" style="background: rgb(255, 255, 255); padding: 96px 64px;">
-      <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 01</div>
-      <div style="display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: end; margin-bottom: 44px;">
-        <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance;">Formations initiales</h2>
-        <p style="margin: 0px; font-size: 16px; line-height: 1.6; color: var(--plum-600);">Deux parcours distincts, animés par des formateurs différents : un pour vos équipes de développement, un pour vos équipes produit.</p>
+    <div id="formations" class="m-section" style="background: rgb(255, 255, 255); padding: 96px 64px;">
+      <div class="m-kicker" style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 01</div>
+      <div class="g-stack" style="display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: end; margin-bottom: 44px;">
+        <h2 class="m-h2" style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance;">Formations initiales</h2>
+        <p class="m-body-lg" style="margin: 0px; font-size: 16px; line-height: 1.6; color: var(--plum-600);">Deux parcours distincts, animés par des formateurs différents : un pour vos équipes de développement, un pour vos équipes produit.</p>
       </div>
-      <p style="margin: 0px 0px 32px; font-size: 16px; line-height: 1.65; color: var(--plum-600); max-width: 900px; text-wrap: pretty;">Chacun couvre la méthode sur son terrain, de l'analyse de marché et des retours utilisateurs jusqu'au code produit avec des agents, avant que les deux se rejoignent sur vos projets.</p>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 40px;">
-        <div class="card-lift" style="border: 1px solid var(--plum-200); border-radius: 14px; padding: 30px 32px; background: rgb(255, 255, 255); box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
-          <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--orange-700); margin-bottom: 14px;">TRACK DÉVELOPPEMENT</div>
-          <p style="margin: 0px; font-size: 15.5px; line-height: 1.65; color: var(--plum-600);">Préparer le contexte, consommer une spec, produire du code avec des agents, le faire tenir en production. Vos développeurs repartent avec des pratiques communes, pas des astuces individuelles.</p>
+      <p class="m-body-lg" style="margin: 0px 0px 32px; font-size: 16px; line-height: 1.65; color: var(--plum-600); max-width: 900px; text-wrap: pretty;">Chacun couvre la méthode sur son terrain, de l'analyse de marché et des retours utilisateurs jusqu'au code produit avec des agents, avant que les deux se rejoignent sur vos projets.</p>
+      <div class="g-stack" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 40px;">
+        <div class="card-lift m-card-pad" style="border: 1px solid var(--plum-200); border-radius: 14px; padding: 30px 32px; background: rgb(255, 255, 255); box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
+          <div class="m-kicker" style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--orange-700); margin-bottom: 14px;">TRACK DÉVELOPPEMENT</div>
+          <p class="m-body" style="margin: 0px; font-size: 15.5px; line-height: 1.65; color: var(--plum-600);">Préparer le contexte, consommer une spec, produire du code avec des agents, le faire tenir en production. Vos développeurs repartent avec des pratiques communes, pas des astuces individuelles.</p>
         </div>
-        <div class="card-lift" style="border: 1px solid var(--plum-200); border-radius: 14px; padding: 30px 32px; background: rgb(255, 255, 255); box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
-          <div style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--orange-700); margin-bottom: 14px;">TRACK PRODUIT</div>
-          <p style="margin: 0px; font-size: 15.5px; line-height: 1.65; color: var(--plum-600);">Exploiter les retours utilisateurs et la veille concurrentielle avec des agents, cadrer un besoin, écrire des specs que les développeurs et leurs agents peuvent consommer sans les réinterpréter.</p>
+        <div class="card-lift m-card-pad" style="border: 1px solid var(--plum-200); border-radius: 14px; padding: 30px 32px; background: rgb(255, 255, 255); box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
+          <div class="m-kicker" style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--orange-700); margin-bottom: 14px;">TRACK PRODUIT</div>
+          <p class="m-body" style="margin: 0px; font-size: 15.5px; line-height: 1.65; color: var(--plum-600);">Exploiter les retours utilisateurs et la veille concurrentielle avec des agents, cadrer un besoin, écrire des specs que les développeurs et leurs agents peuvent consommer sans les réinterpréter.</p>
         </div>
       </div>
-      <h3 style="font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 0px 0px 20px;">Trois formats de délivrance, au choix</h3>
+      <h3 class="m-h3" style="font-family: var(--font-display); font-weight: 700; font-size: 22px; margin: 0px 0px 20px;">Trois formats de délivrance, au choix</h3>
       <div style="border: 1px solid var(--plum-200); border-radius: 14px; overflow: hidden; box-shadow: rgba(63, 4, 52, 0.08) 0px 2px 8px;">
-        <div style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 16px 32px; background: var(--plum-50); border-bottom: 1px solid var(--plum-200);">
+        <div class="m-table-head" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 16px 32px; background: var(--plum-50); border-bottom: 1px solid var(--plum-200);">
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--plum-600);">FORMAT</span>
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--plum-600);">RYTHME</span>
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: var(--plum-600);">MODALITÉ</span>
         </div>
-        <div class="table-row-light" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid var(--plum-200); align-items: baseline;">
+        <div class="table-row-light m-table-row" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid var(--plum-200); align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 18px;">Modules unitaires</span>
-          <span style="font-size: 15px; color: var(--plum-600);">½ journée par module</span>
-          <span style="font-size: 15px; color: var(--plum-600);">Présentiel de préférence</span>
+          <span data-label="RYTHME" style="font-size: 15px; color: var(--plum-600);">½ journée par module</span>
+          <span data-label="MODALITÉ" style="font-size: 15px; color: var(--plum-600);">Présentiel de préférence</span>
         </div>
-        <div class="table-row-light" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid var(--plum-200); align-items: baseline;">
+        <div class="table-row-light m-table-row" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid var(--plum-200); align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 18px;">Modules regroupés</span>
-          <span style="font-size: 15px; color: var(--plum-600);">1 ou 2 jours</span>
-          <span style="font-size: 15px; color: var(--plum-600);">Présentiel</span>
+          <span data-label="RYTHME" style="font-size: 15px; color: var(--plum-600);">1 ou 2 jours</span>
+          <span data-label="MODALITÉ" style="font-size: 15px; color: var(--plum-600);">Présentiel</span>
         </div>
-        <div class="table-row-light" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 22px 32px; align-items: baseline;">
+        <div class="table-row-light m-table-row" style="display: grid; grid-template-columns: 1.2fr 1.6fr 1fr; gap: 24px; padding: 22px 32px; align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 18px;">Cohorte</span>
-          <span style="font-size: 15px; color: var(--plum-600);">Sessions de 1h30, quêtes à réaliser entre les sessions</span>
-          <span style="font-size: 15px; color: var(--plum-600);">Distanciel</span>
+          <span data-label="RYTHME" style="font-size: 15px; color: var(--plum-600);">Sessions de 1h30, quêtes à réaliser entre les sessions</span>
+          <span data-label="MODALITÉ" style="font-size: 15px; color: var(--plum-600);">Distanciel</span>
         </div>
       </div>
       <div style="display: flex; align-items: center; justify-content: space-between; gap: 48px; margin-top: 24px;">
-        <p style="margin: 0px; font-size: 15px; line-height: 1.6; color: var(--plum-600); max-width: 820px;">Le format cohorte étale l'apprentissage dans le temps : chaque session se prolonge par une mise en pratique sur votre contexte réel, reprise en début de session suivante.</p>
+        <p class="m-body" style="margin: 0px; font-size: 15px; line-height: 1.6; color: var(--plum-600); max-width: 820px;">Le format cohorte étale l'apprentissage dans le temps : chaque session se prolonge par une mise en pratique sur votre contexte réel, reprise en début de session suivante.</p>
       </div>
     </div>
 
     <!-- Format 02 -->
-    <div id="kickstart" style="background: var(--plum-50); padding: 96px 64px; border-top: 1px solid var(--plum-200); border-bottom: 1px solid var(--plum-200);">
-      <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 02</div>
-      <div style="display: grid; grid-template-columns: 1fr 440px; gap: 64px; align-items: start;">
+    <div id="kickstart" class="m-section" style="background: var(--plum-50); padding: 96px 64px; border-top: 1px solid var(--plum-200); border-bottom: 1px solid var(--plum-200);">
+      <div class="m-kicker" style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 02</div>
+      <div class="g-stack" style="display: grid; grid-template-columns: 1fr 440px; gap: 64px; align-items: start;">
         <div>
-          <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 24px; text-wrap: balance;">Kickstart Spec Driven</h2>
-          <p style="margin: 0px 0px 20px; font-size: 16.5px; line-height: 1.65; color: var(--plum-600); max-width: 640px; text-wrap: pretty;">Trois jours d'accompagnement embarqué auprès d'une de vos équipes, pour lancer une démarche spec-driven sur un projet réel. La méthode s'applique sur votre code, vos specs, votre contexte, pas sur un cas d'école.</p>
-          <div style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255);">
+          <h2 class="m-h2" style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 24px; text-wrap: balance;">Kickstart Spec Driven</h2>
+          <p class="m-body-lg" style="margin: 0px 0px 20px; font-size: 16.5px; line-height: 1.65; color: var(--plum-600); max-width: 640px; text-wrap: pretty;">Trois jours d'accompagnement embarqué auprès d'une de vos équipes, pour lancer une démarche spec-driven sur un projet réel. La méthode s'applique sur votre code, vos specs, votre contexte, pas sur un cas d'école.</p>
+          <div class="m-wrap" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255);">
             <span style="font-weight: 700; font-size: 13px;">3 jours</span>
             <span style="color: var(--plum-500);">·</span>
             <span style="font-size: 13.5px; color: var(--plum-600);">répartis selon le rythme du projet</span>
@@ -179,71 +180,71 @@ const breadcrumbSchema = {
     </div>
 
     <!-- Format 03 -->
-    <div id="atelier" style="background: rgb(255, 255, 255); padding: 96px 64px;">
-      <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 03</div>
-      <div style="display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: end; margin-bottom: 36px;">
-        <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance;">Atelier Transfo IA</h2>
-        <p style="margin: 0px; font-size: 16px; line-height: 1.6; color: var(--plum-600);">C'est le moment où la méthode cesse d'être l'affaire de chaque équipe pour devenir celle de l'organisation.</p>
+    <div id="atelier" class="m-section" style="background: rgb(255, 255, 255); padding: 96px 64px;">
+      <div class="m-kicker" style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 03</div>
+      <div class="g-stack" style="display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: end; margin-bottom: 36px;">
+        <h2 class="m-h2" style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance;">Atelier Transfo IA</h2>
+        <p class="m-body-lg" style="margin: 0px; font-size: 16px; line-height: 1.6; color: var(--plum-600);">C'est le moment où la méthode cesse d'être l'affaire de chaque équipe pour devenir celle de l'organisation.</p>
       </div>
-      <p style="margin: 0px 0px 28px; font-size: 16.5px; line-height: 1.65; color: var(--plum-600); max-width: 860px; text-wrap: pretty;">Une journée d'atelier collectif où vos équipes produit et développement travaillent ensemble, sur les mêmes cas, avec le même vocabulaire.</p>
+      <p class="m-body-lg" style="margin: 0px 0px 28px; font-size: 16.5px; line-height: 1.65; color: var(--plum-600); max-width: 860px; text-wrap: pretty;">Une journée d'atelier collectif où vos équipes produit et développement travaillent ensemble, sur les mêmes cas, avec le même vocabulaire.</p>
       <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 28px;">
         <span style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255); font-weight: 700; font-size: 13px;">1 journée</span>
         <span style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255); font-weight: 700; font-size: 13px;">2 animateurs</span>
         <span style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255); font-weight: 700; font-size: 13px;">jusqu'à 24 participants</span>
-        <span style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255); font-size: 13.5px; color: var(--plum-600);">Présentiel — groupes mixtes produit et développement, cas construits sur votre contexte</span>
+        <span class="m-body" style="display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--plum-200); border-radius: 999px; padding: 10px 20px; background: rgb(255, 255, 255); font-size: 13.5px; color: var(--plum-600);">Présentiel — groupes mixtes produit et développement, cas construits sur votre contexte</span>
       </div>
       <div style="border-left: 3px solid var(--orange-500); padding: 6px 0px 6px 24px; max-width: 860px;">
-        <p style="margin: 0px; font-size: 15.5px; line-height: 1.65; color: var(--plum-600);">Après un Kickstart, l'atelier diffuse ce qu'une équipe pilote a éprouvé sur le terrain à l'ensemble du collectif.</p>
+        <p class="m-body" style="margin: 0px; font-size: 15.5px; line-height: 1.65; color: var(--plum-600);">Après un Kickstart, l'atelier diffuse ce qu'une équipe pilote a éprouvé sur le terrain à l'ensemble du collectif.</p>
       </div>
     </div>
 
     <!-- Format 04 -->
-    <div id="bbl" style="background: var(--plum-50); padding: 96px 64px; border-top: 1px solid var(--plum-200); border-bottom: 1px solid var(--plum-200);">
-      <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 04</div>
-      <div style="display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: end; margin-bottom: 28px;">
-        <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance;">BBL récurrent</h2>
-        <p style="margin: 0px; font-size: 16px; line-height: 1.6; color: var(--plum-600);">Format court récurrent, sur site ou à distance, au rythme qui convient à vos équipes.</p>
+    <div id="bbl" class="m-section" style="background: var(--plum-50); padding: 96px 64px; border-top: 1px solid var(--plum-200); border-bottom: 1px solid var(--plum-200);">
+      <div class="m-kicker" style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-700); margin-bottom: 18px;">FORMAT 04</div>
+      <div class="g-stack" style="display: grid; grid-template-columns: 1fr 480px; gap: 64px; align-items: end; margin-bottom: 28px;">
+        <h2 class="m-h2" style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px; text-wrap: balance;">BBL récurrent</h2>
+        <p class="m-body-lg" style="margin: 0px; font-size: 16px; line-height: 1.6; color: var(--plum-600);">Format court récurrent, sur site ou à distance, au rythme qui convient à vos équipes.</p>
       </div>
-      <p style="margin: 0px; font-size: 16.5px; line-height: 1.65; color: var(--plum-600); max-width: 860px; text-wrap: pretty;">Des sessions courtes et régulières pour entretenir la dynamique après le parcours : un sujet, un cas d'usage, à chaque fois. Les pratiques évoluent vite ; ce format maintient vos équipes à jour sans mobiliser des journées entières.</p>
+      <p class="m-body-lg" style="margin: 0px; font-size: 16.5px; line-height: 1.65; color: var(--plum-600); max-width: 860px; text-wrap: pretty;">Des sessions courtes et régulières pour entretenir la dynamique après le parcours : un sujet, un cas d'usage, à chaque fois. Les pratiques évoluent vite ; ce format maintient vos équipes à jour sans mobiliser des journées entières.</p>
     </div>
 
     <!-- Synthèse -->
-    <div class="bg-dots" style="padding: 96px 64px; color: rgb(255, 255, 255);">
-      <div style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-500); margin-bottom: 18px;">SYNTHÈSE</div>
-      <h2 style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 44px; color: rgb(255, 255, 255); text-wrap: balance;">Les quatre formats en un coup d'œil</h2>
+    <div class="bg-dots m-section" style="padding: 96px 64px; color: rgb(255, 255, 255);">
+      <div class="m-kicker" style="font-weight: 700; font-size: 13px; letter-spacing: 0.18em; color: var(--orange-500); margin-bottom: 18px;">SYNTHÈSE</div>
+      <h2 class="m-h2" style="font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1.1; letter-spacing: -0.02em; margin: 0px 0px 44px; color: rgb(255, 255, 255); text-wrap: balance;">Les quatre formats en un coup d'œil</h2>
       <div style="border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 14px; overflow: hidden; background: rgba(255, 255, 255, 0.03);">
-        <div style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 16px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.13); background: rgba(255, 255, 255, 0.04);">
+        <div class="m-table-head" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 16px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.13); background: rgba(255, 255, 255, 0.04);">
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: rgba(255, 255, 255, 0.6);">FORMAT</span>
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: rgba(255, 255, 255, 0.6);">DURÉE</span>
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: rgba(255, 255, 255, 0.6);">MODALITÉ</span>
           <span style="font-weight: 700; font-size: 12px; letter-spacing: 0.14em; color: rgba(255, 255, 255, 0.6);">POUR QUI</span>
         </div>
-        <div class="table-row-dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); align-items: baseline;">
+        <div class="table-row-dark m-table-row m-table-row--dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 17px; color: rgb(255, 255, 255);">Formations initiales</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">½ journée par module, 1-2 jours regroupés, ou cohorte 1h30</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Selon format</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Équipes dev ou produit, tracks séparés</span>
+          <span data-label="DURÉE" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">½ journée par module, 1-2 jours regroupés, ou cohorte 1h30</span>
+          <span data-label="MODALITÉ" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Selon format</span>
+          <span data-label="POUR QUI" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Équipes dev ou produit, tracks séparés</span>
         </div>
-        <div class="table-row-dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); align-items: baseline;">
+        <div class="table-row-dark m-table-row m-table-row--dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 17px; color: rgb(255, 255, 255);">Kickstart Spec Driven</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">3 jours</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Présentiel ou 100 % distanciel</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Une équipe, sur un projet réel</span>
+          <span data-label="DURÉE" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">3 jours</span>
+          <span data-label="MODALITÉ" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Présentiel ou 100 % distanciel</span>
+          <span data-label="POUR QUI" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Une équipe, sur un projet réel</span>
         </div>
-        <div class="table-row-dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); align-items: baseline;">
+        <div class="table-row-dark m-table-row m-table-row--dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 17px; color: rgb(255, 255, 255);">Atelier Transfo IA</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">1 journée</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Présentiel</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Jusqu'à 24 participants, produit et dev réunis</span>
+          <span data-label="DURÉE" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">1 journée</span>
+          <span data-label="MODALITÉ" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Présentiel</span>
+          <span data-label="POUR QUI" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Jusqu'à 24 participants, produit et dev réunis</span>
         </div>
-        <div class="table-row-dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; align-items: baseline;">
+        <div class="table-row-dark m-table-row m-table-row--dark" style="display: grid; grid-template-columns: 1.2fr 1.4fr 1fr 1.3fr; gap: 24px; padding: 22px 32px; align-items: baseline;">
           <span style="font-family: var(--font-display); font-weight: 700; font-size: 17px; color: rgb(255, 255, 255);">BBL récurrent</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Sessions courtes récurrentes</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Présentiel ou distanciel</span>
-          <span style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Toutes vos équipes formées</span>
+          <span data-label="DURÉE" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Sessions courtes récurrentes</span>
+          <span data-label="MODALITÉ" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Présentiel ou distanciel</span>
+          <span data-label="POUR QUI" style="font-size: 14.5px; color: rgba(255, 255, 255, 0.72);">Toutes vos équipes formées</span>
         </div>
       </div>
-      <p style="margin: 24px 0px 0px; font-size: 15.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.72);">Parcours complet, format isolé, ou combinaison sur mesure : le point de départ, c'est votre situation.</p>
+      <p class="m-body" style="margin: 24px 0px 0px; font-size: 15.5px; line-height: 1.6; color: rgba(255, 255, 255, 0.72);">Parcours complet, format isolé, ou combinaison sur mesure : le point de départ, c'est votre situation.</p>
     </div>
 
     <CtaBand
@@ -256,5 +257,6 @@ const breadcrumbSchema = {
     </main>
 
     <Footer variant="full" />
+    <MobileStickyCta label="Cadrer votre besoin" href="/contact" />
   </div>
 </Layout>
