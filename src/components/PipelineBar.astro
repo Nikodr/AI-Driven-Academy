@@ -7,11 +7,12 @@ interface Item {
 
 interface Props {
   items: Item[];
+  nextBg?: string;
 }
 
-const { items } = Astro.props;
+const { items, nextBg = 'rgb(255, 255, 255)' } = Astro.props;
 ---
-<div class="pipeline-bar-wrap" style="background: linear-gradient(transparent 50%, rgb(255, 255, 255) 50%); padding: 0px 64px;">
+<div class="pipeline-bar-wrap" style={`background: linear-gradient(transparent 50%, ${nextBg} 50%); padding: 0px 64px;`}>
   <div class="pipeline-bar-track" style="display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 999px; padding: 16px 30px; background: var(--plum-800); box-shadow: rgba(26, 1, 22, 0.35) 0px 12px 32px; justify-content: space-between;">
     {items.map((item, i) => (
       <>
