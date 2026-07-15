@@ -135,6 +135,14 @@ textarea:focus {
   background: var(--plum-50);
 }
 
+.m-parcours-link {
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.m-parcours-link:hover {
+  border-color: var(--orange-500) !important;
+  background: rgba(241, 107, 82, 0.08) !important;
+}
+
 .table-row-dark {
   transition: background 0.15s ease;
 }
